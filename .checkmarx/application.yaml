@@ -17,11 +17,12 @@ cxflow:
      - Proposed Not Exploitable
 
 checkmarx:
-  username: $CX_USER
-  password: $CX_PASSWORD
+  version: 9.0
+  username: admin@cx
+  password: Barn4Max-
   client-secret: 014DF517-39D1-4453-B7B3-9930C563627C
-  base-url: $CX_SERVER
-  team: $CX_TEAM
+  base-url: http://cxuk1.eu.ngrok.io
+  team: /CxServer
   url: ${checkmarx.base-url}/cxrestapi
   #WSDL Config
   portal-url: ${checkmarx.base-url}/cxwebinterface/Portal/CxWebService.asmx
