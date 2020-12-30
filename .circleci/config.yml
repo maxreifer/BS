@@ -1,14 +1,9 @@
 version: 2
 
-workflows:
-  build:
-    jobs:
-      - build:
-          context:
-            - cx
-
 jobs:
   build:
+    context:
+      - cx
     docker:
       - image: circleci/openjdk:8u222-stretch
     steps:
