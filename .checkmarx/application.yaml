@@ -1,0 +1,35 @@
+server:
+  port: 80
+logging:
+  file: flow.log
+
+cxflow:
+  bug-tracker: CxXml
+  bug-tracker-impl:
+  - CxXml
+  filter-severity:
+  filter-category:
+  - SQL_Injection
+  - Stored_XSS
+  - Reflected_XSS_All_Clients
+  filter-cwe:
+  filter-status:
+     - Proposed Not Exploitable
+
+checkmarx:
+  username: $CX_USER
+  password: $CX_PASSWORD
+  client-secret: 014DF517-39D1-4453-B7B3-9930C563627C
+  base-url: $CX_SERVER
+  team: $CX_TEAM
+  url: ${checkmarx.base-url}/cxrestapi
+  #WSDL Config
+  portal-url: ${checkmarx.base-url}/cxwebinterface/Portal/CxWebService.asmx
+  sdk-url: ${checkmarx.base-url}/cxwebinterface/SDK/CxSDKWebService.asmx
+  portal-wsdl: ${checkmarx.base-url}/Portal/CxWebService.asmx?wsdl
+  sdk-wsdl: ${checkmarx.base-url}/SDK/CxSDKWebService.asmx?wsdl
+  preserve-xml: true
+  
+cx-xml:
+  file-name-format: "xmlresults.xml"
+  data-folder: "./"
