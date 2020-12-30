@@ -23,8 +23,7 @@ jobs:
       - run:
           name: Execute CxSAST Scan
           command: |
-            cd ~/project/.checkmarx
-            ls
-            cat application.yml
-            java -jar ~/cxflow.jar --spring.config.location=application.yml --project --cx-team="$CX_TEAM" --cx-project="$CIRCLE_PROJECT_REPONAME" --app="$CIRCLE_PROJECT_REPONAME" --cx-flow.bugTracker="NONE"
+            mv ~/project/.checkmarx/application.yml ~/project
+            cd ~/project
+            java -jar ~/cxflow.jar --spring.config.location=application.yml --scan --f="~/project/$CIRCLE_PROJECT_REPONAME" --cx-team="$CX_TEAM" --cx-project="$CIRCLE_PROJECT_REPONAME" --app="$CIRCLE_PROJECT_REPONAME" --cx-flow.bugTracker="NONE"
 
