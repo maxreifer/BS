@@ -28,7 +28,8 @@ jobs:
              --project  \
              --cx-team="$CX_TEAM"  \
              --cx-project="$CX_PROJECT"  \
-             --app="$CX_PROJECT"
+             --app="$CX_PROJECT"  \
+             --bug-tracker="Json"
 
       - run:
           name: Moving Artifacts
