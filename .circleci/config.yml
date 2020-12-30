@@ -29,7 +29,7 @@ jobs:
              --cx-team="$CX_TEAM"  \
              --cx-project="$CX_PROJECT"  \
              --app="$CX_PROJECT"  \
-             --bug-tracker="Json"
+             --cx-flow.bugTracker="Json"
 
       - run:
           name: Moving Artifacts
