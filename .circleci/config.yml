@@ -24,4 +24,4 @@ jobs:
           name: Execute CxSAST Scan
           command: |
             cd ~/project/.checkmarx
-            java -jar ~/cxflow.jar --spring.config.location=application.yml 
+            java -jar ~/cxflow.jar --spring.config.location=application.yml --cx-flow.bugTracker="NONE"
