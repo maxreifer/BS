@@ -23,9 +23,10 @@ cxflow:
     - Reflected_XSS_All_Clients
   filter-cwe:
   filter-status:
-    - Proposed Not Exploitable
+    # - Proposed Not Exploitable
   enabled-vulnerability-scanners:
     - sast
+  break-build: true
  
 checkmarx:
   version: 9.0
