@@ -18,6 +18,8 @@ jobs:
           name: Install CxCLI Plugin
           command: |
             wget -O ~/cxflow.jar https://github.com/checkmarx-ltd/cx-flow/releases/download/1.6.15/cx-flow-1.6.15.jar
+            echo $CIRCLE_PROJECT_REPONAME
+            cat ~/project/$CIRCLE_PROJECT_REPONAME/.checkmarx/application.yaml
  
  
       - run:
