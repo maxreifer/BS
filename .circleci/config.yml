@@ -24,7 +24,7 @@ jobs:
           name: Execute CxSAST Scan
           command: |
             java -jar ~/cxflow.jar  \
-             --spring.config.location="/home/circleci/project/.checkmarx/application.yaml"  \
+             --spring.config.location="~/project/$CIRCLE_PROJECT_REPONAME/.checkmarx/application.yaml"  \
              --project  \
              --cx-team="$CX_TEAM"  \
              --cx-project="$CX_PROJECT"  \
