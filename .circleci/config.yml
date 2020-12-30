@@ -26,6 +26,6 @@ jobs:
             mv ~/project/.checkmarx/application.yml ~/project
             cd ~/project
             ls
-            java -jar ~/cxflow.jar --spring.config.location=application.yml --scan --f="/home/circleci/project" --cx-team="$CX_TEAM" --cx-project="$CIRCLE_PROJECT_REPONAME" --app="$CIRCLE_PROJECT_REPONAME" --cx-flow.bugTracker="NONE"
+            java -jar ~/cxflow.jar --spring.config.location=application.yml --scan --f="/home/circleci/project" --cx-team="$CX_TEAM" --cx-project="$CIRCLE_PROJECT_REPONAME" --app="$CIRCLE_PROJECT_REPONAME" --cx-flow.bugTracker="Json"
             # java -jar ~/cxflow.jar --spring.config.location=application.yml --project --cx-team="$CX_TEAM" --cx-project="$CIRCLE_PROJECT_REPONAME" --app="$CIRCLE_PROJECT_REPONAME" --cx-flow.bugTracker="NONE"
 
