@@ -1,9 +1,13 @@
 version: 2
 
+workflows:
+  test-env-vars:
+    jobs:
+      - build:
+          context: Cx
+
 jobs:
   build:
-    context:
-        - Cx
     docker:
       - image: circleci/openjdk:8u222-stretch
     steps:
