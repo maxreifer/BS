@@ -23,7 +23,7 @@ jobs:
       - run:
           name: Execute CxSAST Scan
           command: |
-            java -jar cx-flow.jar  \
+            java -jar ~/cx-flow.jar  \
              --spring.config.location="~/.checkmarx/application.yml"  \
              --project  \
              --cx-team="$CX_TEAM"  \
