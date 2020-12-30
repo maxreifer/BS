@@ -1,5 +1,14 @@
-server:
-  port: 80
+
+logging:
+  file: flow.log
+  level:
+    com:
+      checkmarx:
+        flow: debug
+    org:
+      apache:
+       http:
+          wire: TRACE
 logging:
   file: flow.log
 
