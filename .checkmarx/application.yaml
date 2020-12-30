@@ -32,6 +32,7 @@ checkmarx:
   username: admin@cx
   password: Barn4Max-
   client-secret: 014DF517-39D1-4453-B7B3-9930C563627C
+  scope: access_control_api sast_rest_api
   base-url: http://cxuk1.eu.ngrok.io
   team: /CxServer
   url: ${checkmarx.base-url}/cxrestapi
