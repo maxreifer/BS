@@ -6,7 +6,7 @@ logging:
 cxflow:
   bug-tracker: Json
   bug-tracker-impl:
-  - Json
+    - Json
   filter-severity:
   filter-category:
     - SQL_Injection
@@ -17,8 +17,7 @@ cxflow:
     - Proposed Not Exploitable
   enabled-vulnerability-scanners:
     - sast
-    - sca
-
+ 
 checkmarx:
   version: 9.0
   username: admin@cx
