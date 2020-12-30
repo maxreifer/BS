@@ -1,4 +1,3 @@
-
 logging:
   file: flow.log
   level:
@@ -8,11 +7,12 @@ logging:
     org:
       apache:
        http:
-          wire: TRACE
+         wire: TRACE
 logging:
   file: flow.log
 
 cxflow:
+  contact: admin@cx.com
   bug-tracker: Json
   bug-tracker-impl:
     - Json
