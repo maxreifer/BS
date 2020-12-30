@@ -4,17 +4,20 @@ logging:
   file: flow.log
 
 cxflow:
-  bug-tracker: NONE
+  bug-tracker: Json
   bug-tracker-impl:
-  - CxXml
+  - Json
   filter-severity:
   filter-category:
-  - SQL_Injection
-  - Stored_XSS
-  - Reflected_XSS_All_Clients
+    - SQL_Injection
+    - Stored_XSS
+    - Reflected_XSS_All_Clients
   filter-cwe:
   filter-status:
-     - Proposed Not Exploitable
+    - Proposed Not Exploitable
+  enabled-vulnerability-scanners:
+    - sast
+    - sca
 
 checkmarx:
   version: 9.0
