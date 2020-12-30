@@ -8,9 +8,9 @@ logging:
       apache:
        http:
          wire: TRACE
-logging:
-  file: flow.log
-
+server:
+  port: 80
+  
 cxflow:
   contact: admin@cx.com
   bug-tracker: Json
