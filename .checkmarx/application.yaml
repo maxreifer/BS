@@ -34,15 +34,15 @@ checkmarx:
   client-secret: 014DF517-39D1-4453-B7B3-9930C563627C
   scope: access_control_api sast_rest_api
   base-url: http://cxuk1.eu.ngrok.io
+  multi-tenant: true
+  scan-preset: Checkmarx Default
+  configuration: Default Configuration
   team: /CxServer
   url: ${checkmarx.base-url}/cxrestapi
+  preserve-xml: true
   #WSDL Config
   portal-url: ${checkmarx.base-url}/cxwebinterface/Portal/CxWebService.asmx
   sdk-url: ${checkmarx.base-url}/cxwebinterface/SDK/CxSDKWebService.asmx
   portal-wsdl: ${checkmarx.base-url}/Portal/CxWebService.asmx?wsdl
   sdk-wsdl: ${checkmarx.base-url}/SDK/CxSDKWebService.asmx?wsdl
-  preserve-xml: true
-  
-cx-xml:
-  file-name-format: "xmlresults.xml"
-  data-folder: "./"
+
