@@ -24,20 +24,11 @@ jobs:
           name: Execute CxSAST Scan
           command: |
             java -jar ~/cxflow.jar  \
-             --spring.config.location="~/.checkmarx/application.yaml"  \
+             --spring.config.location="/home/circleci/project/.checkmarx/application.yaml"  \
              --project  \
              --cx-team="$CX_TEAM"  \
              --cx-project="$CX_PROJECT"  \
              --app="$CX_PROJECT"  \
              --cx-flow.bugTracker="NONE"
 
-      - run:
-          name: Moving Artifacts
-          command: |
-            mkdir ~/artifacts
-            mv ~/cxcli/Checkmarx/Reports/* ~/artifacts
-      # Store the generated reports with the build logs in CircleCI
-      - store_artifacts:
-          path: ~/artifacts
-          destination: sast_results
-
+   
