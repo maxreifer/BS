@@ -30,11 +30,11 @@ cxflow:
  
 checkmarx:
   version: 9.0
-  username: $CX_USER
-  password: $CX_PASSWORD
+  #username: $CX_USER
+  #password: $CX_PASSWORD
   client-secret: 014DF517-39D1-4453-B7B3-9930C563627C
   scope: access_control_api sast_rest_api
-  base-url: $CX_SERVER
+  #base-url: $CX_SERVER
   multi-tenant: true
   scan-preset: Checkmarx Default
   configuration: Default Configuration
