@@ -31,11 +31,11 @@ cxflow:
  
 checkmarx:
   version: 9.0
-  #username: Passed in as a cmd line parameter defined in the CircleCI config file. Username can be efined as an 'Organisational Setting' for privacy. 
-  #password: Passed in as a cmd line parameter defined in the CircleCI config file. Password can be efined as an 'Organisational Setting' for privacy. 
+  #username: Passed in as a cmd line parameter defined in the CircleCI config file. Username can be defined as an 'Organisational Setting' for privacy. 
+  #password: Passed in as a cmd line parameter defined in the CircleCI config file. Password can be defined as an 'Organisational Setting' for privacy. 
   client-secret: 014DF517-39D1-4453-B7B3-9930C563627C
   scope: access_control_api sast_rest_api
-  #base-url: Passed in as a cmd line parameter defined in the CircleCI config file. URL can be efined as an 'Organisational Setting' for cross project use. 
+  #base-url: Passed in as a cmd line parameter defined in the CircleCI config file. URL can be defined as an 'Organisational Setting' for cross project use. 
   multi-tenant: true
   scan-preset: Checkmarx Default
   configuration: Default Configuration
@@ -52,6 +52,6 @@ sca:
   appUrl: https://sca.scacheckmarx.com
   apiUrl: https://api.scacheckmarx.com
   accessControlUrl: https://platform.checkmarx.net
-  #tenant: CxUK-Andrew
-  #username: DevOpsUK2
-  #password: Barn4Max-
+  #tenant: Passed in as a cmd line parameter defined in the CircleCI config file. Tenant can be defined as an 'Organisational Setting' for privacy.  
+  #username: Passed in as a cmd line parameter defined in the CircleCI config file. Username can be defined as an 'Organisational Setting' for privacy.
+  #password: Passed in as a cmd line parameter defined in the CircleCI config file. Password can be defined as an 'Organisational Setting' for privacy.
