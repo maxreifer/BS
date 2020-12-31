@@ -30,11 +30,11 @@ cxflow:
  
 checkmarx:
   version: 9.0
-  #username: $CX_USER
-  #password: $CX_PASSWORD
+  #username: Passed in as a cmd line parameter defined in teh CircleCI config file. Username can be efined as an 'Organisational Setting' for privacy. 
+  #password: Passed in as a cmd line parameter defined in teh CircleCI config file. Password can be efined as an 'Organisational Setting' for privacy. 
   client-secret: 014DF517-39D1-4453-B7B3-9930C563627C
   scope: access_control_api sast_rest_api
-  #base-url: $CX_SERVER
+  #base-url: Passed in as a cmd line parameter defined in teh CircleCI config file. URL can be efined as an 'Organisational Setting' for cross project use. 
   multi-tenant: true
   scan-preset: Checkmarx Default
   configuration: Default Configuration
