@@ -51,8 +51,7 @@ checkmarx:
 sca:
   appUrl: https://sca.scacheckmarx.com
   apiUrl: https://api.scacheckmarx.com
-  # accessControlUrl: https://v2.ac-checkmarx.com
   accessControlUrl: https://platform.checkmarx.net
-  tenant: CxUK-Andrew
-  username: DevOpsUK2
-  password: Barn4Max-
+  #tenant: CxUK-Andrew
+  #username: DevOpsUK2
+  #password: Barn4Max-
