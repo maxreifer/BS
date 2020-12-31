@@ -26,7 +26,7 @@ cxflow:
     # - Proposed Not Exploitable
   enabled-vulnerability-scanners:
     - sast
-	- sca
+    - sca
   break-build: true
  
 checkmarx:
