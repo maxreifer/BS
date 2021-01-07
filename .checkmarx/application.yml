@@ -1,0 +1,57 @@
+logging:
+  file: flow.log
+  #level:
+    #com:
+      #checkmarx:
+        #flow: debug
+    #org:
+      #apache:
+       #http:
+         #wire: TRACE
+#server:
+  #port: 80
+  
+cxflow:
+  contact: admin@cx.com
+  bug-tracker: Json
+  bug-tracker-impl:
+    - Json
+  filter-severity:
+  filter-category:
+    - SQL_Injection
+    - Stored_XSS
+    - Reflected_XSS_All_Clients
+  filter-cwe:
+  filter-status:
+    # - Proposed Not Exploitable
+  enabled-vulnerability-scanners:
+    - sast
+    - sca
+  break-build: true
+ 
+checkmarx:
+  version: 9.0
+  #username: Passed in as a cmd line parameter defined in the CircleCI config file. Username can be defined as an 'Organisational Setting' for privacy. 
+  #password: Passed in as a cmd line parameter defined in the CircleCI config file. Password can be defined as an 'Organisational Setting' for privacy. 
+  client-secret: 014DF517-39D1-4453-B7B3-9930C563627C
+  scope: access_control_api sast_rest_api
+  #base-url: Passed in as a cmd line parameter defined in the CircleCI config file. URL can be defined as an 'Organisational Setting' for cross project use. 
+  multi-tenant: true
+  scan-preset: Checkmarx Default
+  configuration: Default Configuration
+  team: /CxServer
+  url: ${checkmarx.base-url}/cxrestapi
+  preserve-xml: true
+  #WSDL Config
+  portal-url: ${checkmarx.base-url}/cxwebinterface/Portal/CxWebService.asmx
+  sdk-url: ${checkmarx.base-url}/cxwebinterface/SDK/CxSDKWebService.asmx
+  portal-wsdl: ${checkmarx.base-url}/Portal/CxWebService.asmx?wsdl
+  sdk-wsdl: ${checkmarx.base-url}/SDK/CxSDKWebService.asmx?wsdl
+  
+sca:
+  appUrl: https://sca.scacheckmarx.com
+  apiUrl: https://api.scacheckmarx.com
+  accessControlUrl: https://platform.checkmarx.net
+  #tenant: Passed in as a cmd line parameter defined in the CircleCI config file. Tenant can be defined as an 'Organisational Setting' for privacy.  
+  #username: Passed in as a cmd line parameter defined in the CircleCI config file. Username can be defined as an 'Organisational Setting' for privacy.
+  #password: Passed in as a cmd line parameter defined in the CircleCI config file. Password can be defined as an 'Organisational Setting' for privacy.
