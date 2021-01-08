@@ -32,8 +32,8 @@ jobs:
               --app="$CIRCLE_PROJECT_REPONAME" \
               --cx-flow.bugTracker="Json" \
               --checkmarx.base-url=$CX_SERVER \
-              --checkmarx.username=$CX_USER \
-              --checkmarx.password=$CX_PASSWORD \
+              --checkmarx.username=admin@cx \
+              --checkmarx.password=Barn4Max- \
               --sca.tenant=$CX_SCA_TENANT \
               --sca.username=$CX_SCA_USER \
               --sca.password=$CX_SCA_PWD
