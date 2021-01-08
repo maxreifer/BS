@@ -50,7 +50,7 @@ checkmarx:
   
 sca:
   appUrl: https://eu.sca.checkmarx.net
-  apiUrl: https://eu.api.scacheckmarx.net
+  apiUrl: https://eu.api-sca.checkmarx.net
   accessControlUrl: https://eu.platform.checkmarx.net
   #tenant: Passed in as a cmd line parameter defined in the CircleCI config file. Tenant can be defined as an 'Organisational Setting' for privacy.  
   #username: Passed in as a cmd line parameter defined in the CircleCI config file. Username can be defined as an 'Organisational Setting' for privacy.
