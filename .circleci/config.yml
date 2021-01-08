@@ -17,7 +17,7 @@ jobs:
       - run:
           name: Install CxCLI Plugin
           command: |
-            wget -O ~/cxflow.jar https://github.com/checkmarx-ltd/cx-flow/releases/download/1.6.15/cx-flow-1.6.15.jar
+            wget -O ~/cxflow.jar https://github.com/checkmarx-ltd/cx-flow/releases/download/1.6.15/cx-flow-1.6.17.jar
             echo $CIRCLE_PROJECT_REPONAME
  
       - run:
