@@ -34,7 +34,7 @@ jobs:
               --checkmarx.base-url=http://1cf11689d422.ngrok.io \
               --checkmarx.username=admin@cx \
               --checkmarx.password=Barn4Max- \
-              --sca.tenant=$CX_SCA_TENANT \
-              --sca.username=$CX_SCA_USER \
-              --sca.password=$CX_SCA_PWD
+              --sca.tenant=SPW \
+              --sca.username=admin \
+              --sca.password=Barn4Max-
             
