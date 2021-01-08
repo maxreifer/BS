@@ -49,8 +49,8 @@ checkmarx:
   sdk-wsdl: ${checkmarx.base-url}/SDK/CxSDKWebService.asmx?wsdl
   
 sca:
-  appUrl: https://eu.sca.scacheckmarx.com
-  apiUrl: https://eu.api.scacheckmarx.com
+  appUrl: https://eu.sca.scacheckmarx.net
+  apiUrl: https://eu.api.scacheckmarx.net
   accessControlUrl: https://eu.platform.checkmarx.net
   #tenant: Passed in as a cmd line parameter defined in the CircleCI config file. Tenant can be defined as an 'Organisational Setting' for privacy.  
   #username: Passed in as a cmd line parameter defined in the CircleCI config file. Username can be defined as an 'Organisational Setting' for privacy.
