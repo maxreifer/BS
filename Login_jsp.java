@@ -443,9 +443,13 @@ static final String sFileName = "Login.jsp";
           
           if ( rs.next() ) {
             // Login and password passed
-            session.setAttribute("UserID", rs.getString(1));
+            String param =  rs.getString(1);
+            param = com.acme.Sanitiser.customSanitizeRoutine(param);
+            session.setAttribute("UserID", param);
             
-            session.setAttribute("UserRights", rs.getString(2));
+            String param2 =  rs.getString(2);
+            param2 = com.acme.Sanitiser.customSanitizeRoutine(param2);
+            session.setAttribute("UserRights", param2);
             sQueryString = getParam( request, "querystring");
             sPage = getParam( request, "ret_page");
             if ( ! sPage.equals(request.getRequestURI() ) && ! "".equals(sPage)) {
