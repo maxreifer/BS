@@ -30,11 +30,12 @@ jobs:
               --cx-team="$CX_TEAM" \
               --cx-project="$CIRCLE_PROJECT_REPONAME" \
               --app="$CIRCLE_PROJECT_REPONAME" \
-              --cx-flow.bugTracker="Jira" \
+              --cx-flow.bugTracker="Json" \
               --checkmarx.base-url=$CX_SERVER \
               --checkmarx.username=$CX_USER \
               --checkmarx.password=$CX_PASSWORD \
               --sca.tenant=$CX_SCA_TENANT \
               --sca.username=$CX_SCA_USER \
               --sca.password=$CX_SCA_PWD
+            ls  
             
