@@ -13,7 +13,7 @@ logging:
   
 cxflow:
   contact: admin@cx.com
-  bug-tracker: Json
+  bug-tracker: Jira
   bug-tracker-impl:
     - Json
   branches:
@@ -56,3 +56,34 @@ sca:
   #tenant: Passed in as a cmd line parameter defined in the CircleCI config file. Tenant can be defined as an 'Organisational Setting' for privacy.  
   #username: Passed in as a cmd line parameter defined in the CircleCI config file. Username can be defined as an 'Organisational Setting' for privacy.
   #password: Passed in as a cmd line parameter defined in the CircleCI config file. Password can be defined as an 'Organisational Setting' for privacy.
+  
+jira:
+  url: https://cxukat.atlassian.net/
+  #username: CxUK
+  username: andrew@andrewthompson.me.uk
+  token: FDdECKrmG6H8sKdebNVk7F6C
+
+  project: AP
+  issue-type: Bug
+  priorities:
+    High: High
+    Medium: Medium
+    Low: Low
+    Informational: Lowest
+  open-transition: In Progress
+  close-transition: Done
+  open-status:
+    - Backlog
+    - Selected for Development
+    - In Progress
+  closed-status:
+    - Done
+  fields:
+    - type: result
+      name: application
+      jira-field-name: Application
+      jira-field-type: label
+    - type: result
+      name: category
+      jira-field-name: Category
+      jira-field-type: label  
