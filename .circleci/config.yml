@@ -37,5 +37,8 @@ jobs:
               --sca.tenant=$CX_SCA_TENANT \
               --sca.username=$CX_SCA_USER \
               --sca.password=$CX_SCA_PWD
-            ls  
+      - run:
+          name: List files
+          command: |
+            ls
             
