@@ -25,8 +25,8 @@ cxflow:
   filter-status:
     # - Proposed Not Exploitable
   enabled-vulnerability-scanners:
-   # - sast
-    - sca
+    - sast
+   # - sca
   break-build: true
  
 checkmarx:
