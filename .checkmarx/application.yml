@@ -16,11 +16,12 @@ cxflow:
   bug-tracker: Json
   bug-tracker-impl:
     - Json
+  branches:
+    - develop
+    - master  
   filter-severity:
+    - High
   filter-category:
-    - SQL_Injection
-    - Stored_XSS
-    - Reflected_XSS_All_Clients
   filter-cwe:
   filter-status:
     # - Proposed Not Exploitable
