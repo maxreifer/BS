@@ -87,3 +87,6 @@ jira:
       name: category
       jira-field-name: Category
       jira-field-type: label  
+json:
+  file-name-format: "[NAMESPACE]-[REPO]-[BRANCH]-[TIME].json"
+  data-folder: "~"
