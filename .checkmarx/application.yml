@@ -89,4 +89,4 @@ jira:
       jira-field-type: label  
 json:
   file-name-format: "[NAMESPACE]-[REPO]-[BRANCH]-[TIME].json"
-  data-folder: "~"
+  data-folder: "/home/circleci/"
