@@ -88,5 +88,5 @@ jira:
       jira-field-name: Category
       jira-field-type: label  
 json:
-  file-name-format: "[NAMESPACE]-[REPO]-[BRANCH]-[TIME].json"
+  file-name-format: "$CIRCLE_PROJECT_REPONAME.json"
   data-folder: "/home/circleci/"
