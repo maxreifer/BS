@@ -36,7 +36,8 @@ jobs:
               --checkmarx.password=$CX_PASSWORD \
               --sca.tenant=$CX_SCA_TENANT \
               --sca.username=$CX_SCA_USER \
-              --sca.password=$CX_SCA_PWD
+              --sca.password=$CX_SCA_PWD \
+              --json.file-name-format="$CIRCLE_PROJECT_REPONAME.json"
             ls  
               
       - store_artifacts:
