@@ -37,6 +37,11 @@ jobs:
               --sca.tenant=$CX_SCA_TENANT \
               --sca.username=$CX_SCA_USER \
               --sca.password=$CX_SCA_PWD
+              
+      - store_artifacts:
+          path: ~/[NAMESPACE]-[REPO]-[BRANCH]-[TIME].json
+          
+       
       - run:
           name: List files
           command: |
