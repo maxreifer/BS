@@ -40,7 +40,7 @@ jobs:
             ls  
               
       - store_artifacts:
-          path: /home/circleci/$CIRCLE_PROJECT_REPONAME.json
+          path: /home/circleci/"$CIRCLE_PROJECT_REPONAME.json"
           
        
       - run:
