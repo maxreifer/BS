@@ -9,7 +9,7 @@ logging:
        #http:
          #wire: TRACE
 #server:
-  #port: 80
+  #port: 80 fg
   
 cxflow:
   contact: admin@cx.com
