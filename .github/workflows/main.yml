@@ -2,7 +2,7 @@ name: CXGO SCAN
 'on':
   push:
     branches:
-      - Main
+      - Master
 jobs:
   build:
     runs-on: ubuntu-latest
