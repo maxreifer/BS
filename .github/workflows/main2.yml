@@ -1,31 +1,100 @@
-name: CXGO SCAN
+name: CheckmarxFlow
+# Controls when the action will run. 
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  build:
+  # This workflow contains a single job called "build"
+  SAST:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+        
+      - name: Checkmarx CxFlow Action
+        uses: checkmarx-ts/checkmarx-cxflow-github-action@v1.1
+        with:
+          # Provide Checkmarx URL
+          checkmarx_url: https://funimation.checkmarx.net
+          # Select a Checkmarx Team
+          team: /CxServer
+          # Provide Checkmarx Username
+          checkmarx_username: "ScannerGit"
+          # Provide Checkmarx Password
+          checkmarx_password: "ff!R8P2g@n4WgjrEVg6HWIH"
+          
+          # Provide Checkmarx Client Secret
+          checkmarx_client_secret: ${{secrets.CHECKMARX_CLIENT_SECRET}}
+          # Select a Checkmarx Project
+          # project: ${{Env.GITHUB_REPOSITORY}}
+          project: https://github.com/funi-main/identity-pin-service
+          # Select a Checkmarx Preset
+          preset: All
+          # optional, default is Checkmarx Default
+          # Break build based on Checkmarx findings?
+          break_build: false
+          # Vulnerability Scanners (sast, sca, ast, cxgo):  
+          scanners: sast, sca
+          # bug_tracker: GITHUBPULL
+          # Incremental Scans?
+          incremental: true
+          # Additional CLI parameters
+          # params: # optional, default is 
+          # GitHub API Token (note: you don't have to create secrets.GITHUB_TOKEN, it is created automatically and will not appear in your repo's custom secrets)
+          github_token: ${{secrets.GITHUB_TOKEN}}
+          # Provide SCA API URL
+          sca_api_url: https://eu.api-sca.checkmarx.net # optional, default is https://api.scacheckmarx.com
+          # Provide SCA APP URL
+          sca_app_url: https://eu.sca.checkmarx.net # optional, default is https://sca.scacheckmarx.com
+          # Provide SCA Access Control URL
+          sca_access_control_url: https://eu.platform.checkmarx.net # optional, default is https://platform.checkmarx.net
+          # Provide SCA Tenant
+          sca_tenant: "Funimation"
+          # Provide SCA Username
+          sca_username: "ScannerGit"
+          # Provide SCA Password
+          sca_password: "ff!R8P2g@n4WgjrEVg6HWIH"
+          #params: --config=cx.config 
+          # --bug-tracker=NONE --checkmarx.version=9.0 
+      
+  KICS:     
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-      - if: github.event_name == 'push'
-        name: Extract Branch Name
-        run: 'echo "BRANCH=$(echo ${GITHUB_REF##*/})" >> $GITHUB_ENV'
-      - if: github.event_name == 'pull_request'
-        name: Extract Branch Name
-        run: 'echo "BRANCH=$(echo ${GITHUB_HEAD_REF})" >> $GITHUB_ENV'
-      - name: Install cxgo-cli npm package
-        run: npm install -g @cxgo/cli
-      - name: Scan project sources with cxgo-cli
-        run: >-
-          cxgo-cli scan:start --project-id=114
-          --api-url=https://api.checkmarx.net  --scan-tag=${GITHUB_SHA}
-          --source-folder=${GITHUB_WORKSPACE} --branch-name=${BRANCH}
-        env:
-          CXGO_TOKEN: '${{ secrets.CXGO_TOKEN }}'
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    - uses: actions/checkout@v2
+    - name: run kics Scan
+      uses: checkmarx/kics-github-action@v1.0
+      with:
+          path: '.'
+          output_path: 'kics-results.json'
+          
+    - name: display kics results
+      run: |
+          cat kics-results.json 
+    - name: 'Upload Artifact'
+      uses: actions/upload-artifact@v2
+      with:
+        name: kics-results.json
+        path: kics-results.json
+        retention-days: 5
+        
+    - name: Break Build?
+      run: |     
+          TOTAL_SEVERITY_COUNTER=`grep '"totalCounter"':' ' kics-results.json | awk {'print $2'}`
+          export SEVERITY_COUNTER_HIGH=`grep '"HIGH"':' ' kics-results.json | awk {'print $2'} | sed 's/.$//'`
+          SEVERITY_COUNTER_MEDIUM=`grep '"INFO"':' ' kics-results.json | awk {'print $2'} | sed 's/.$//'`
+          SEVERITY_COUNTER_LOW=`grep '"LOW"':' ' kics-results.json | awk {'print $2'} | sed 's/.$//'`
+          SEVERITY_COUNTER_INFO=`grep '"MEDIUM"':' ' kics-results.json | awk {'print $2'} | sed 's/.$//'`
+          echo "TOTAL SEVERITY COUNTER $TOTAL_SEVERITY_COUNTER"
+          if [ "$SEVERITY_COUNTER_HIGH" -ge "1" ];then echo "Please fix all $SEVERITY_COUNTER_HIGH HIGH SEVERITY COUNTERS" && exit 1;fi
