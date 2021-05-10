@@ -69,26 +69,24 @@ jobs:
           # --bug-tracker=NONE --checkmarx.version=9.0 
       
   KICS:     
-    runs-on: ubuntu-latest
-    steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
-    - name: run kics Scan
-      uses: checkmarx/kics-github-action@v1.0
-      with:
-          path: '.'
-          output_path: 'kics-results.json'
+  
+  - name: KICS Github Action
+  # You may pin to the exact commit or the version.
+  # uses: Checkmarx/kics-github-action@cb2313a26fe90642154115860323ef72655de41e
+    uses: Checkmarx/kics-github-action@v1.0
+    with:
+    # path to file or directory to scan
+    path: 
+    # file path to store result in json format
+    output_path: # optional
+    # file path to store source internal representation in JSON format
+    payload_path: # optional
+    # path to directory with queries (default "./assets/queries")
+    queries: # optional
+    # verbose scan
+    verbose: # optional
+  
           
-    - name: display kics results
-      run: |
-          cat kics-results.json 
-    - name: 'Upload Artifact'
-      uses: actions/upload-artifact@v2
-      with:
-        name: kics-results.json
-        path: kics-results.json
-        retention-days: 5
-        
     - name: Break Build?
       run: |     
           TOTAL_SEVERITY_COUNTER=`grep '"totalCounter"':' ' kics-results.json | awk {'print $2'}`
