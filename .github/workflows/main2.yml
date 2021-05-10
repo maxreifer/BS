@@ -38,7 +38,7 @@ jobs:
           checkmarx_client_secret: ${{secrets.CHECKMARX_CLIENT_SECRET}}
           # Select a Checkmarx Project
           # project: ${{Env.GITHUB_REPOSITORY}}
-          project: https://github.com/funi-main/identity-pin-service
+          project: ${{Env.GITHUB_REPOSITORY}}
           # Select a Checkmarx Preset
           preset: All
           # optional, default is Checkmarx Default
