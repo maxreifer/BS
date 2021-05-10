@@ -16,11 +16,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: KICS Github Action
-      # You may pin to the exact commit or the version.
-      # uses: Checkmarx/kics-github-action@cb2313a26fe90642154115860323ef72655de41e
-      uses: Checkmarx/kics-github-action@v1.0
+      uses: Checkmarx/kics-github-action@master
       with:
-          path: '.'
+          path: "./"
           output_path: 'kics-results.json'
-        # file path to store source internal representation in JSON format
         
