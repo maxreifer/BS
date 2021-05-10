@@ -69,8 +69,8 @@ jobs:
           # --bug-tracker=NONE --checkmarx.version=9.0 
       
   KICS:     
-  
-  - name: KICS Github Action
+    runs-on: ubuntu-latest
+    name: KICS Github Action
   # You may pin to the exact commit or the version.
   # uses: Checkmarx/kics-github-action@cb2313a26fe90642154115860323ef72655de41e
     uses: Checkmarx/kics-github-action@v1.0
