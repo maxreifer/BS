@@ -71,12 +71,10 @@ jobs:
   KICS:     
     runs-on: ubuntu-latest
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
-    - name: run kics Scan
-      uses: checkmarx/kics-github-action@v1.0
+    - name: KICS Github Action
+      uses: Checkmarx/kics-github-action@master
       with:
-          path: '.'
+          path: "./"
           output_path: 'kics-results.json'
 
     - name: display kics results
