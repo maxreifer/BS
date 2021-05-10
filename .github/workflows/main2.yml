@@ -34,7 +34,7 @@ jobs:
           # Provide Checkmarx Password
           checkmarx_password: "ff!R8P2g@n4WgjrEVg6HWIH"
           
-          # Provide Checkmarx Client Secret
+          # Provide Checkmarx Client Secret  #014DF517-39D1-4453-B7B3-9930C563627C
           checkmarx_client_secret: 014DF517-39D1-4453-B7B3-9930C563627C
           # Select a Checkmarx Project
           # project: ${{Env.GITHUB_REPOSITORY}}
