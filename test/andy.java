@@ -7,7 +7,7 @@ public andy extends HttpJspBase {
 //   Generated with CodeCharge  v.1.2.0
 //   JSP.ccp build 05/21/2001
 //
-  static final String CRLF = "\r\n";
+//  static final String CRLF = "\r\n";
   static final int UNDEFINT=Integer.MIN_VALUE;
   static final int adText = 1;
   static final int adDate = 2;
