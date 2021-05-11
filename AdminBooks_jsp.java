@@ -1,7 +1,6 @@
 /* 
 public class AdminBooks_jsp extends HttpJspBase {
 
-//
 // 
 //
 //   Filename: Common.jsp
