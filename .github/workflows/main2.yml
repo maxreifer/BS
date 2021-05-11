@@ -45,7 +45,7 @@ jobs:
           # Break build based on Checkmarx findings?
           break_build: false
           # Vulnerability Scanners (sast, sca, ast, cxgo):  
-          scanners: sast, sca
+          scanners: sast   #, sca
           # bug_tracker: GITHUBPULL
           # Incremental Scans?
           incremental: true
