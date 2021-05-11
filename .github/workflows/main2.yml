@@ -65,7 +65,7 @@ jobs:
           sca_username: "ScannerGit"
           # Provide SCA Password
           sca_password: "ff!R8P2g@n4WgjrEVg6HWIH"
-          params: --sast.folderExcludes=lib,test
+          params: --sast.folderExcludes=lib,test --sast.fileExcludes=
           # --bug-tracker=NONE --checkmarx.version=9.0 
           
                     
