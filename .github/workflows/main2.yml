@@ -65,9 +65,9 @@ jobs:
           sca_username: "ScannerGit"
           # Provide SCA Password
           sca_password: "ff!R8P2g@n4WgjrEVg6HWIH"
-          # params: --config=cx.config 
+          params: --checkmarx.exclude-folders=lib,test
           # --bug-tracker=NONE --checkmarx.version=9.0 
-          exclude_folders: lib,test
+          
                     
       
   KICS:     
