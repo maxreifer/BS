@@ -65,6 +65,6 @@ jobs:
           sca_username: "ScannerGit"
           # Provide SCA Password
           sca_password: "ff!R8P2g@n4WgjrEVg6HWIH"
-          params: "--cx-flow.exclude-folders=test"
+          params: --cx-flow.exclude-folders="test"
           
      
