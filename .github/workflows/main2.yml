@@ -66,5 +66,5 @@ jobs:
           sca_username: "ScannerGit"
           # Provide SCA Password
           sca_password: "ff!R8P2g@n4WgjrEVg6HWIH"
-          params:  --checkmarx.settings-override=true --bug-tracker=jira --config=cx.config --repo-name=BS_GHA --namespace=cxukat --branch=master --jira.url=https://cxukat.atlassian.net --jira.username="andrew@andrewthompson.me.uk" --jira.token="FDdECKrmG6H8sKdebNVk7F6C"
+          params:  --checkmarx.settings-override=true --bug-tracker=jira --config=cx.config --repo-name=BS_GHA --namespace=cxukat --branch=master --jira.url=https://cxukat.atlassian.net --jira.username=andrew@andrewthompson.me.uk --jira.token=FDdECKrmG6H8sKdebNVk7F6C
      
