@@ -12,7 +12,7 @@ public class AdvSearch_jsp extends HttpJspBase {
 //   JSP.ccp build 05/21/2001/test
 //
 
-  static final String CRLF = "\r\n";
+  static final String CRLF = "\r\n";/ change
 
   static final int UNDEFINT=Integer.MIN_VALUE;
 
