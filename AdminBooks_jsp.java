@@ -1,5 +1,5 @@
 /* 
-public class AdminBooks_jsp extends HttpJspBase {
+public class AdminBooks_jsp extends HttpJspBase {/ change
 
 // \zxz\
 //  
