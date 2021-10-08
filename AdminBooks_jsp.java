@@ -10,7 +10,7 @@ public class AdminBooks_jsp extends HttpJspBase {
 
   static final String CRLF = "\r\n";
 
-  static final int UNDEFINT=Integer.MIN_VALUE;
+  static final int UNDEFINT=Integer.MIN_VALUE;/change
 
   static final int adText = 1;
   static final int adDate = 2;
