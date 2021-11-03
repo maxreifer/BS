@@ -4,7 +4,7 @@ public class AdminBooks_jsp extends HttpJspBase {/ change
 // \zxz\
 //  
 //   Filename: Common.jsp/test/
-//   Generated with CodeCharge  v.1.2.0
+//   Generated with CodeCharge  v.1.2.0/ change
 //   JSP.ccp build 05/21/2001
 //
 
