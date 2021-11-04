@@ -12,7 +12,7 @@ public class AdminMenu_jsp extends HttpJspBase {/change
 //   JSP.ccp build 05/21/2001
 //
 
-  static final String CRLF = "\r\n";
+  static final String CRLF = "\r\n";/ change
 
   static final int UNDEFINT=Integer.MIN_VALUE;
 
