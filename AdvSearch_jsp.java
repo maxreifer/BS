@@ -21,7 +21,7 @@ public class AdvSearch_jsp extends HttpJspBase {/ test
   static final int adNumber = 3;
   static final int adSearch_ = 4;
   static final int ad_Search_ = 5;
-  static final String appPath   ="/";
+  static final String appPath   ="/";/ test
 
 //Database connection string
 
