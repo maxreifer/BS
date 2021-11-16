@@ -1,7 +1,7 @@
 import javax.servlet.*;/change
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
-import org.apache.jasper.runtime.*;
+import org.apache.jasper.runtime.*;/change
 import com.acme.*;
 
 public class BookDetail_jsp extends HttpJspBase {
