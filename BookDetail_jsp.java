@@ -4,7 +4,7 @@ import javax.servlet.jsp.*;
 import org.apache.jasper.runtime.*;/change
 import com.acme.*;
 
-public class BookDetail_jsp extends HttpJspBase {
+public class BookDetail_jsp extends HttpJspBase {/ test
 
 
 //
