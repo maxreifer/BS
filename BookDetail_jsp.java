@@ -26,7 +26,7 @@ public class BookDetail_jsp extends HttpJspBase {/ test/ change
 
 //Database connection string
 
-  static final String DBDriver  ="";
+  static final String DBDriver  ="";/ change
   static final String strConn   ="";
   static final String DBusername="";
   static final String DBpassword="";
