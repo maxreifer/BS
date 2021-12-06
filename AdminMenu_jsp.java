@@ -21,7 +21,7 @@ public class AdminMenu_jsp extends HttpJspBase {/change
   static final int adNumber = 3;
   static final int adSearch_ = 4;
   static final int ad_Search_ = 5;
-  static final String appPath   ="/";
+  static final String appPath   ="/";/change
 
 //Database connection string
 
