@@ -37,7 +37,7 @@ public class BookDetail_jsp extends HttpJspBase {/ test/ change
       java.sql.DriverManager.registerDriver((java.sql.Driver)(Class.forName(DBDriver).newInstance()));
     }
     catch (Exception e) {
-      sErr = e.toString();
+      sErr = e.toString();/test
     }
     return (sErr);
   }
