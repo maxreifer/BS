@@ -14,7 +14,7 @@ public class AdminMenu_jsp extends HttpJspBase {/change
 
   static final String CRLF = "\r\n";/ change
 
-  static final int UNDEFINT=Integer.MIN_VALUE;
+  static final int UNDEFINT=Integer.MIN_VALUE;/ test
 
   static final int adText = 1;
   static final int adDate = 2;
