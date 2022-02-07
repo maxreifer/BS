@@ -3,7 +3,7 @@ import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 import org.apache.jasper.runtime.*;/ test/change
 
-public class AdminMenu_jsp extends HttpJspBase {/change
+public class AdminMenu_jsp extends HttpJspBase {/change/ test
 
 
 // fdsf/ test
